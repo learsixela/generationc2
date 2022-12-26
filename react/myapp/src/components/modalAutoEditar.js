@@ -11,7 +11,7 @@ const autoValues =[
     }
 ]
 
-const  ModalAutoEditar = ({autoAgregar,autoEditado, showEdit})=>{
+const  ModalAutoEditar = ({autoAgregar,autoEditado})=>{
     const [auto, setAuto] = useState(autoValues);
     const {marca, color}= auto;
     const [show, setShow] = useState(false);
@@ -24,11 +24,7 @@ const  ModalAutoEditar = ({autoAgregar,autoEditado, showEdit})=>{
                 setAuto(autoEditado)
                 setShow(true);
             }else{
-                setAuto({
-                id:'',
-                marca:'',
-                color:'', 
-                })
+                setAuto(autoValues)
                 setShow(false);
             }
         }
